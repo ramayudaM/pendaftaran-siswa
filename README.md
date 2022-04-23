@@ -24,4 +24,7 @@ Akun:
   Pendaftar:
     * Email = ramayuda@gmail.com
     * Password = 123
+    
+    * Email = mahardika@gmail.com
+    * Password = 123
 ```
