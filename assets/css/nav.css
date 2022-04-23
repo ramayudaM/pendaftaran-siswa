@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --purple: #797EE0;
+    --soft: #F7F5F9;
+    --softPurple: #E2E2F1;
+    --softGray: #F9FAFC;
+    /* --soft: #F0F1F1; */
+    --black: #000;
+    --white: #fff;
+    --gray: #7C828E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'roboto', sans-serif;
+    background-color: var(--soft);
+    user-select: none;
+}   
+
+main {
+    display: grid;
+    width: 96vw;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 2vw;
+}
+
+aside {
+    width: 14rem;
+    height: 100vh;
+    /* margin-left: 1.2rem; */
+    /* padding-right: 1.2rem; */
+    position: fixed;
+}
+
+.behind-aside{
+    width: 14rem;
+    z-index: -2;
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.top .logo {
+    font-size: 1rem;
+}
+
+.top i {
+    font-size: 1.4rem;
+    display: none;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 82vh;
+}
+
+.sidebar a {
+    color: var(--gray);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 1rem;
+    height: 2.4rem;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.sidebar i {
+    font-size: 1.4rem;
+}
+
+.sidebar h4 {
+    font-size: 1rem;
+}
+
+.sidebar a:hover {
+    color: var(--purple);
+    background-color: var(--softPurple);
+    border-radius: 0.3rem;
+}
+
+/* //////////////////// sidebar logout //////////////////////// */
+.sidebar a:last-child {
+    width: 92%;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+/* //////////////////// sidebar disable ////////////////////// */
+.sidebar .disable {
+    cursor: not-allowed;
+    position: relative;
+    background-color: transparent;
+}
+
+.sidebar .disable:hover {
+    color: var(--gray);
+    background-color: transparent;
+}
+
+.sidebar .disable::before {
+    content: 'Masukkan data untuk menggunakan fitur profile';
+    color: var(--error);
+    font-size: 0.9rem;     
+    font-style: italic;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateY(-50%);
+    width: 9rem;
+    padding: 0.8rem;
+    background-color: var(--soft);
+    border-radius: 0.4rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    z-index: 99;
+    display: none;
+}
+
+.sidebar .disable:hover::before {
+    display: block;
+}
+
+/* /////////////////////// logout /////////////////////// */
+.logout {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color: var(--softGray);
+    border: 1px solid var(--purple);
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    border-radius: 0.4rem;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.logout .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout .text i {
+    color: var(--purple);
+    font-size: 5rem;
+}
+
+.logout .text p {
+    color: var(--gray);
+    width: 80%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.logout .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logout .button a {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.8rem;
+    background-color: var(--purple);
+    text-decoration: none;
+    border-radius: 0.4rem;
+    border: 1px solid var(--purple);
+    transition: all 0.4s ease;
+}
+
+.logout .button a:first-child {
+    color: var(--black);
+    border: 1px solid var(--black);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.logout .button a:hover {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.logout .button a:first-child:hover {
+    color: var(--white);
+}
+/* ////////////////////// blur main ////////////////////// */
+.blur {
+    filter: blur(0.3rem);
+    pointer-events: none;
+    transition: all 0.4s ease;
+}

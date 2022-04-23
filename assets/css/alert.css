@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --error: #EC4E2C;
+    --secondaryError: #FCEDE9;
+
+    --success: #3FBE61;
+    --secondarySuccess:#EAF7EE;
+
+    --warning: #EE9500;
+    --secondaryWarning: #FEF7EA;
+
+    --info: #0268D9;
+    --secondaryInfo: #E6EFFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 26rem;
+    height: 3.6rem;
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    transition: all 0.4s ease;
+}
+
+.alert .text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alert .text i {
+    font-size: 1.4rem;
+}
+
+.alert p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.alert span {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* error box */
+.alert.error {
+    border: 1px solid var(--error);
+    background-color: var(--secondaryError);
+}
+
+.alert.error p {
+    color: var(--error);
+}
+
+.alert.error i {
+    color: var(--error);
+}
+
+/* success box */
+.alert.success {
+    border: 1px solid var(--success);
+    background-color: var(--secondarySuccess);
+}
+
+.alert.success p {
+    color: var(--success);
+}
+
+.alert.success i {
+    color: var(--success);
+}
+
+/* warning box */
+.alert.warning {
+    border: 1px solid var(--warning);
+    background-color: var(--secondaryWarning);
+}
+
+.alert.warning p {
+    color: var(--warning);
+}
+
+.alert.warning i {
+    color: var(--warning);
+}
+
+/* info box */
+.alert.info {
+    border: 1px solid var(--info);
+    background-color: var(--secondaryInfo);
+}
+
+.alert.info p {
+    color: var(--info);
+}
+
+.alert.info i {
+    color: var(--info);
+}
+
+/* animation shake */
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(-47);
+    }
+
+    50% {
+        transform: translateX(-53%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+

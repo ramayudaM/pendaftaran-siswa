@@ -1,0 +1,238 @@
+main {
+    grid-template-columns: 14rem 1fr 1fr;
+    height: 110vh;
+}
+
+.sidebar a:nth-child(2) {
+    color: var(--purple);
+    background-color: var(--softPurple);
+    border-radius: 0.3rem;
+}
+
+.left {
+    display: grid;
+    grid-template-rows: 8rem auto 1fr;
+    position: relative;
+}
+
+.left .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h2 {
+    font-size: 1.4rem;
+}
+
+.date {
+    margin-top: 0.4rem;
+    display: flex;
+    width: 8.4rem;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 0.2rem;
+    padding: 0.4rem 0;
+    background-color: var(--softPurple);
+    border-radius: 0.2rem;
+}
+
+.date p {
+    font-size: 0.9rem;
+}
+
+/* /////////////////////////////// data diri ///////////////////////////// */
+.left .content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.left .content1 .foto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.left .content1 .foto img {
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.left .content1 .foto .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.left .content1 .foto .text h5{
+    font-size: 1.2rem;
+}
+
+.left .content1 .foto .text p{
+    font-size: 1rem;
+}
+
+.left .content1 .data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left .content1 .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+}
+
+.left .content1 .list h5 {
+    font-size: 0.9rem;
+}
+
+.left .content1 .list p {
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+
+.left .content1 .list:last-child {
+    grid-column: 1 / 3;
+}
+
+/* ///////////////////////////// right /////////////////////////// */
+.right .content2 {
+    margin-top: 10rem;
+}
+
+.right .content2 .box{
+    background-color: var(--softGray);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.right .content2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right .content2 .input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right .content2 .input-area input {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border: 1px solid var(--gray);
+    position: relative;
+    transition: all 0.4s ease;
+    border-radius: 0.4rem;
+    background-color: transparent;
+}
+
+.right .content2 .input-area input:focus {
+    outline: none;
+}
+
+.right .content2 .btn-area .btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;    
+}
+
+.right .content2 .btn-area .btn button {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.right .content2 .btn-area .btn button[type="submit"]{
+    width: 80%;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.right .content2 .btn-area .btn button[type="submit"]:hover {
+    background-color: var(--purple);
+}
+
+.right .content2 .btn-area .btn button[type="reset"]{
+    width: 20%;
+    color: var(--black);
+    border: 1px solid var(--black);
+    background-color: transparent;
+}
+
+.right .content2 .btn-area .btn button[type="reset"]:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/* ////////////////////// pengumuman ///////////////////// */
+.right .content2 .box.pengumuman {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.right .content2 .box.pengumuman h4 {
+    font-size: 1.1rem;
+}
+
+.right .content2 .box.pengumuman.satu i {
+    color: var(--warning);
+    font-size: 6.6rem;
+}
+
+.right .content2 .box.pengumuman.dua i {
+    color: var(--success);
+    font-size: 6.6rem;
+}
+
+.right .content2 .box.pengumuman.tiga i {
+    color: var(--error);
+    font-size: 6.6rem;
+}
+
+.right .content2 .box.pengumuman p {
+    font-size: 0.9rem;
+    width: 60%;
+}
+
+.right .content2 .box.pengumuman mark {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--softPurple);
+    border-radius: 0.4rem;
+}
+
+/* ////////////////////////// nilai ////////////////////////// */
+.right .content3 {
+    margin-top: 2.2rem;
+}
+
+.right .content3 .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+}

@@ -1,0 +1,208 @@
+main {
+    grid-template-columns: 14rem 1fr 1fr;
+}
+
+.sidebar a:nth-child(1) {
+    color: var(--purple);
+    background-color: var(--softPurple);
+    border-radius: 0.3rem;
+}
+
+.left {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 8rem auto 1fr;
+}
+
+.left .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h2 {
+    font-size: 1.4rem;
+}
+
+.date {
+    margin-top: 0.4rem;
+    display: flex;
+    width: 8.4rem;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 0.2rem;
+    padding: 0.4rem 0;
+    background-color: var(--softPurple);
+    border-radius: 0.2rem;
+}
+
+.date p {
+    font-size: 0.9rem;
+}
+
+.content1 {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: var(--softGray);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.content1 marquee {
+    background-color: var(--softPurple);
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+}
+
+.content2 {
+    margin-top: 3rem;
+}
+
+.content2 .tabs {
+    display:  flex;
+    margin-top: 1rem;
+}
+
+.content2 .tabs h5 {
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--softGray);
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.4s ease;
+}
+
+.content2 .tabs h5:first-child {
+    border-top-left-radius: 1rem;
+    opacity: 1;
+}
+
+.content2 .box .text{
+    padding: 2rem;
+    height: 10rem;
+    background-color: var(--softGray);
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.content2 .box .text h5 {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray);
+}
+
+.content2 .box .text p {
+    font-size: 0.9rem;
+    margin-top: 1.4rem;
+}
+
+.content2 .box .text:nth-child(2),
+.content2 .box .text:nth-child(3){
+    display: none;
+}
+
+.right {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.content3 {
+    margin-top: 6.6rem;
+}
+
+.content3 .box {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: var(--softGray);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.content3 .box > p {
+    line-height: 1.4rem;
+}
+
+.content3 .list {
+    margin-top: 2rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.4rem;
+}
+
+.content3 .list p {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--gray);
+    counter-increment: list;
+    position: relative;
+}
+
+.content3 .list p mark {
+    font-size: 0.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    padding: 0.4rem 1rem;
+    background-color: var(--softPurple);
+    border-radius: 0.6rem;
+}
+
+.content3 .list p:last-child {
+    border: none;
+}
+
+.content3 .list p::before {
+    content: counter(list) '.';
+    padding-right: 0.6rem;
+}
+
+.content4 {
+    margin-top: 3rem;
+}
+
+.content4 .list {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: var(--softGray);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.content4 .list a{
+    color: var(--black);
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content4 .list .kontak {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content4 .list .lokasi {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.4rem;
+}
+
+.content4 .list .lokasi a {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.4rem;
+    border-bottom: 1px solid var(--gray);
+}
+
+.content4 .list .lokasi iframe {
+    border: 0;
+    width: 100%;
+    height: 20rem;
+}

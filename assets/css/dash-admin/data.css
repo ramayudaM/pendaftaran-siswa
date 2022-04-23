@@ -1,0 +1,489 @@
+main {
+    grid-template-columns: 14rem 1fr;
+    height: 110vh;
+}
+
+.sidebar a:nth-child(1) {
+    color: var(--purple);
+    background-color: var(--softPurple);
+    border-radius: 0.3rem;
+}
+
+.left {
+    display: grid;
+    grid-template-rows: 8rem auto 1fr;
+}
+
+.left .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h2 {
+    font-size: 1.4rem;
+}
+
+.date {
+    margin-top: 0.4rem;
+    display: flex;
+    width: 8.4rem;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 0.2rem;
+    padding: 0.4rem 0;
+    background-color: var(--softPurple);
+    border-radius: 0.2rem;
+}
+
+.date p {
+    font-size: 0.9rem;
+}
+
+.content1 {
+    padding: 2rem 0;
+    background-color: var(--softGray);
+    border-radius: 0.4rem;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.content1 table{
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+}
+
+.content1 table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--softPurple);
+}
+
+.content1 table td:nth-child(1), 
+td:nth-child(5),
+td:nth-child(6),
+td:nth-child(7),
+td:nth-child(8) {
+    text-align: center;
+}
+
+.content1 table th {
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.8rem;
+    background-color: var(--purple);
+    /* border: 1px solid var(--white); */
+}
+
+.content1 table tr:nth-child(even) {
+    background-color: var(--soft);
+}
+
+.content1 table tr td span{
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.content1 table tr td .info{
+    background-color: var(--info);
+}
+.content1 table tr td .error{
+    background-color: var(--error);
+}
+.content1 table tr td .success{
+    background-color: var(--success);
+}
+
+.content1 table tr td:last-child {
+    display: flex;
+    gap: 0.6rem;
+}
+.content1 table tr td i {
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+/* ///////////////////// status /////////////////// */
+.status {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: var(--softGray);
+    border: 1px solid var(--purple);
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    border-radius: 0.4rem;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.status .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.status .text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.status .text .option {
+    display: flex;
+    gap: 2rem;
+}
+
+.status .text .option p {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.status .text .option .input-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.status .text label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+}
+
+.status .text label input[type="radio"] {
+    display: none;
+}
+
+.status .text label .radio-radio {
+    width: 0.4rem;
+    height: 0.4rem;
+    padding: 0.2rem;
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+}
+
+.status .text label .radio-radio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--purple);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.status .text label input[type="radio"]:checked + .radio-radio::after {
+    transform: scale(1);
+}
+
+.status .button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status .button button {
+    color: var(--white);
+    font-size: 0.9rem;
+    padding: 0.6rem 1.8rem;
+    background-color: var(--purple);
+    border-radius: 0.4rem;
+    border: 1px solid var(--purple);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.status .button button:first-child {
+    color: var(--black);
+    border: 1px solid var(--black);
+    background-color: transparent;
+}
+
+.status .button button:hover {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.status .button button:first-child:hover {
+    color: var(--white);
+}
+
+.hapus {
+    width: 20%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: var(--softGray);
+    border: 1px solid var(--purple);
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    border-radius: 0.4rem;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hapus .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hapus .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hapus .modal-body p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.hapus .modal-body h4 {
+    color: var(--purple);
+    font-size: 1.1rem;
+}
+
+.hapus .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.hapus .modal-footer button {
+    width: 70%;
+    color: var(--black);
+    border: 1px solid var(--black);
+    background-color: transparent;
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+    border-radius: 0.4rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.hapus .modal-footer button:hover {
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.hapus .modal-footer a {
+    text-decoration: none;
+    text-align: center;
+    width: 30%;
+    color: var(--white);
+    border: 1px solid var(--purple);
+    background-color: var(--purple);
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+    border-radius: 0.4rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+}
+.hapus .modal-footer a:hover {
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.cek-data {
+    width: 70vw;
+    height: 80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: var(--soft);
+    border: 1px solid var(--purple);
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    border-radius: 0.4rem;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cek-data .modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.cek-data .modal-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 1rem;
+}
+
+.cek-data .modal-left .modal-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cek-data .modal-left .modal-header img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.cek-data .modal-left .modal-header .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.cek-data .modal-left .modal-header .text h5{
+    font-size: 1.2rem;
+}
+
+.cek-data .modal-left .modal-header .text p{
+    font-size: 1rem;
+}
+
+.cek-data .modal-left .modal-footer .data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cek-data .modal-left .modal-footer .data .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+}
+
+.cek-data .modal-left .modal-footer .data .list h5 {
+    font-size: 0.9rem;
+}
+
+.cek-data .modal-left .modal-footer .data .list p {
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+
+.cek-data .modal-left .modal-footer .data .list:last-child {
+    grid-column: 1 / 3;
+}
+
+.cek-data .modal-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.cek-data .modal-right .modal-header .modal-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.cek-data .modal-right .modal-header .info {
+    color: var(--info);
+    background-color: var(--secondaryInfo);
+    border: 1px solid var(--info);
+}
+
+.cek-data .modal-right .modal-header .success {
+    color: var(--success);
+    background-color: var(--secondarySuccess);
+    border: 1px solid var(--success);
+}
+
+.cek-data .modal-right .modal-header .error {
+    color: var(--error);
+    background-color: var(--secondaryError);
+    border: 1px solid var(--error);
+}
+
+.cek-data .modal-right .modal-body .data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cek-data .modal-right .modal-body .data .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.4);
+}
+
+.cek-data .modal-right .modal-body .data .list h5 {
+    font-size: 0.9rem;
+}
+
+.cek-data .modal-right .modal-body .data .list p {
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+
+.cek-data .modal-right .modal-body .data .list:last-child {
+    grid-column: 1 / 3;
+}
+
+.cek-data .modal-right .modal-footer .batal-data{
+    position: absolute;
+    right: 3rem;
+    bottom: 2rem;
+    cursor: pointer;
+}
+
+.cek-data .modal-right .modal-footer i {
+    color: var(--purple);
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid var(--purple);
+    box-shadow: 0 1rem 2rem rgba(132, 139, 200, 0.18);
+    position: absolute;
+    right: 0rem;
+    bottom: 0;
+    transition: all 0.4s ease;
+}
+
+.cek-data .modal-right .modal-footer p{
+    color: var(--purple);
+    font-weight: 500;
+    position: absolute;
+    left: -2rem;
+    bottom: 0.8rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.cek-data .modal-right .modal-footer:hover i{
+    right: 2rem;
+}
+
+.cek-data .modal-right .modal-footer:hover p {
+    left: -1rem;
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --purple: #797EE0;
+    --softPurple: #E9E9F6;
+    --soft: #f6f6f9;
+    --black: #000;
+    --white: #fff;
+    --gray: #707070;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'roboto', sans-serif;
+    background-color: var(--soft);
+    user-select: none;
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(3px);
+    }
+    50% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+.back {
+    position: absolute;
+    top: 4vh;
+    left: 4vw;
+}
+
+.back i {
+    color: var(--black);
+    font-size: 1.2rem;
+    padding: 16px;
+    background-color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main {
+    width: 18%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 60px 80px;
+    border-radius: 40px;
+}
+
+main .logo h4 {
+    font-size: 1.1rem;
+    color: var(--black);
+    margin-bottom: 40px;
+}
+
+form header h1{
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+form header p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+form .info-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    display: flex;
+    padding: 14px;
+    margin: 30px 0;
+}
+
+form .error {
+    color: var(--error);
+    background-color: var(--secondaryError);
+    border: 1px solid var(--error); 
+}
+
+form .success {
+    color: var(--success);
+    background-color: var(--secondarySuccess);
+    border: 1px solid var(--success); 
+}
+
+form .info-text i {
+    padding-left: 10px;
+    cursor: pointer ;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-area {
+    display: flex;
+    position: relative;
+}
+
+.input-area input {
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.input-area input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--black);
+}
+
+.input-area label {
+    font-size: 0.9rem;
+    color: var(--gray);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: text;
+    transition: all 0.4s ease;
+}
+
+.input-area input:focus ~ label {
+    top: 0;
+    font-size: 0.8rem;
+    color: var(--black);
+}
+
+.show-hide {
+    position: absolute;
+    font-size: 1rem;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.show-hide #hide {
+    position: absolute;
+}
+
+.error-text {
+    font-size: 0.9rem;
+    color: var(--error);
+    margin-top: 6px;
+    font-style: italic;
+    display: none;
+}
+
+.auth-btn {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-btn button {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    color: var(--white);
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--black);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.auth-btn button:hover {
+    background-color: var(--purple);
+}
+
+.auth-btn p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.auth-btn p a {
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.auth-btn p a:hover {
+    color: var(--purple);
+}
+
+/* responsive breakpoint */
+
+/* ukuran laptop */
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+    main {
+        width: 30%;
+        padding: 40px 40px;
+        border-radius: 40px;
+    }
+}
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    main {
+        width: 40%;
+        padding: 40px 40px;
+        border-radius: 40px;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+    main {
+        width: 60%;
+        padding: 40px 40px;
+        border-radius: 30px;
+    }
+}
